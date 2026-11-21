@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #e7e5e4;
+  --color-muted: #a8a29e;
+  --color-line: #292524;
+  --color-paper: #0c0a09;
+  --color-card: #1c1917;
+  --color-brand: #f59e0b;
+  --color-ok: #22c55e;
+  --color-danger: #ef4444;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body { background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); }
+
+@utility btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition disabled:opacity-50; }
+@utility btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition disabled:opacity-50 bg-brand text-black hover:brightness-110; }
+@utility btn-ghost { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition disabled:opacity-50 border border-line bg-card hover:bg-white/5; }
+@utility btn-danger { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition disabled:opacity-50 bg-danger text-white hover:brightness-110; }
+@utility input { @apply w-full rounded-lg border border-line bg-paper px-3 py-2 text-sm outline-none focus:border-brand; }
+@utility label { @apply mb-1 block text-xs font-medium text-muted; }
+@utility card { @apply rounded-xl border border-line bg-card p-4; }
